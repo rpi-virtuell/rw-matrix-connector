@@ -24,7 +24,7 @@ class RW_Matrix_Connector_Actions {
 					$message->content = get_permalink( $post );
 					self::check_event( 'publish_page', $message );
 					break;
-				case 'episode' :
+				case 'podcast' :
 					$message          = new RW_Matrix_Connector_Message();
 					$message->type    = MatrixMessageText;
 					$message->content = get_permalink( $post );
