@@ -30,7 +30,12 @@ class RW_Matrix_Connector_Actions {
 					$message->content = get_permalink( $post );
 					self::check_event( 'publish_podcast', $message );
 					break;
-
+				case 'material' :
+					$message          = new RW_Matrix_Connector_Message();
+					$message->type    = MatrixMessageText;
+					$message->content = get_permalink( $post );
+					self::check_event( 'publish_material', $message );
+					break;
 			}
 		}
 	}
